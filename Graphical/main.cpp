@@ -58,10 +58,11 @@ int f = 1;
 #endif
 
 #ifdef _LINUX
-std::string path = "../Graphical/";
+std::string path = "../../Grapher/src/";
 GLint V_WIDTH = WIDTH / 2, V_HEIGHT = HEIGHT / 2;
 #else
-std::string path = "/Users/Melanie/Documents/Studies/LORIA/Handshaking/Graphical/";
+std::string logPath = "";
+std::string path = "/Users/Melanie/Documents/Studies/LORIA/Grpher/src/";
 GLint V_WIDTH = WIDTH, V_HEIGHT = HEIGHT;
 #endif
 
@@ -83,7 +84,11 @@ int main()
     Shader shader((path + "shaders/shader.vs").c_str(), (path + "shaders/shader.frag").c_str());
     
     glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-    grapher = new Grapher(0);
+    grapher = new Grapher(TMAX, NB_VARIABLES);
+    grapher->setDisplayedVariables(0, {_sigma_s2E, _sigma_s2F, _sigma_s3E, _sigma_s3F});
+    grapher->setDisplayedVariables(1, {_F2, _s2});
+    grapher->setDisplayedVariables(2, {_F3, _s3});
+    grapher->setDisplayedVariables(3, {_Af_2E, _Af_2F, _Af_3E, _Af_3F});
     
     Simulation2 simulation(mico_names);
     
