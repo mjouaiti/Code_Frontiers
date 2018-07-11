@@ -36,7 +36,7 @@
 #define GLFW_INCLUDE_GLCOREARB
 #include <GLFW/glfw3.h>
 
-#include "Grapher.h"
+#include "../../Grapher/src/Grapher.h"
 #include "../Simulation/Simulation2.h"
 #include "../common.h"
 
@@ -57,12 +57,11 @@ int f = 2;
 int f = 1;
 #endif
 
-#ifdef _LINUX
 std::string path = "../../Grapher/src/";
+#ifdef _LINUX
 GLint V_WIDTH = WIDTH / 2, V_HEIGHT = HEIGHT / 2;
 #else
 std::string logPath = "";
-std::string path = "/Users/Melanie/Documents/Studies/LORIA/Grpher/src/";
 GLint V_WIDTH = WIDTH, V_HEIGHT = HEIGHT;
 #endif
 
@@ -164,7 +163,7 @@ void init()
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
     
-    _Window = glfwCreateWindow(WIDTH, HEIGHT, "MultiViewModelling", 0, 0);
+    _Window = glfwCreateWindow(WIDTH, HEIGHT, "Grapher", 0, 0);
     
     
     if (!_Window)

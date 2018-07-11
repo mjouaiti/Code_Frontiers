@@ -32,7 +32,7 @@ set(COMMON_SOURCES common.cpp lib-cpg/Integrator.cpp Robot/Robot.cpp Robot/Robot
 
 set(GRAPHICAL_SOURCES Graphical/main.cpp)
 
-add_executable(Graphical ${C_SOURCES} ${COMMON_SOURCES} Simulation/Simulation.cpp Simulation/Approach.cpp ${GRAPHICAL_SOURCES})
+add_executable(Graphical ${C_SOURCES} ${COMMON_SOURCES} Simulation/Simulation.cpp ${GRAPHICAL_SOURCES})
 add_definitions(-pthread)
 target_link_libraries(Graphical ${CMAKE_SOURCE_DIR}/../Grapher/build/libGrapher.a)
 

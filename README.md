@@ -11,6 +11,8 @@ REQUIRED DEPENDENCIES:
     GLEW (Linux ONLY) http://glew.sourceforge.net
    
     V-REP http://www.coppeliarobotics.com
+    
+    Grapher library https://github.com/mjouaiti/Grapher
 
 COMPILING
 
@@ -30,4 +32,4 @@ RUNNING
 
     ./Graphical
 
-Before running ./Graphical, open the VREP file mico.ttt in the V-REP file.
+Before running ./Graphical, open the VREP file mico.ttt in the V-REP folder.
